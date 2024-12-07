@@ -1,0 +1,69 @@
+{
+  "extensions": {
+    "recommendations": [
+      "spadin.zmk-tools",
+      "spmeesseman.vscode-taskexplorer"
+    ]
+  },
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnPaste": false,
+    "files.associations": {
+      "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+      "*.c": "c",
+      "*.cfg": "ini",
+      "*.code-workspace": "json",
+      "*.cpp": "cpp",
+      "*.h": "c",
+      "*.hpp": "cpp",
+      "*.inc": "c",
+      "*.json": "json",
+      "*.keymap": "dts",
+      "*.lock": "toml",
+      "*.overlay": "dts",
+      "*.sql": "sql",
+      "*.tcc": "c",
+      "*.toml": "toml",
+      ".env": "shellscript",
+      ".env.*": "shellscript",
+      ".gitchangelog.rc": "python",
+      ".pythonstartup": "python",
+      "Pipfile": "toml",
+      "array": "c",
+      "bit": "c",
+      "compare": "c",
+      "condition_variable": "c",
+      "cstddef": "c",
+      "functional": "c",
+      "limits": "c",
+      "list": "c",
+      "memory": "c",
+      "mutex": "c",
+      "new": "c",
+      "optional": "c",
+      "profile": "shellscript",
+      "ranges": "c",
+      "ratio": "c",
+      "rc": "shellscript",
+      "regex": "c",
+      "string": "c",
+      "system_error": "c",
+      "toml": "toml",
+      "tuple": "c",
+      "type_traits": "c",
+      "utility": "c",
+      "variant": "c",
+      "xstddef": "c"
+    },
+    "vars": {
+      "zmk": "/workspaces/zmk",
+      "zmk_build": "/workspaces/zmk-config/scripts/build.sh",
+      "zmk_config": "/workspaces/zmk-config",
+      "zmk_modules": "/workspaces/zmk-modules"
+    }
+  }
+}
