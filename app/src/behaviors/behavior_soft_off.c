@@ -57,6 +57,9 @@ static int on_keymap_binding_released(struct zmk_behavior_binding *binding,
         uint32_t hold_time = k_uptime_get() - data->press_start;
 
         if (hold_time > config->hold_time_ms) {
+            if (IS_ENABLED(CONFIG_ZMK_SPLIT) && IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)) {
+                k_sleep(K_MSEC(100));
+            }
             zmk_pm_soft_off();
         } else {
             LOG_INF("Not triggering soft off: held for %d and hold time is %d", hold_time,
@@ -71,6 +74,9 @@ static const struct behavior_driver_api behavior_soft_off_driver_api = {
     .binding_pressed = on_keymap_binding_pressed,
     .binding_released = on_keymap_binding_released,
     .locality = BEHAVIOR_LOCALITY_GLOBAL,
+#if IS_ENABLED(CONFIG_ZMK_BEHAVIOR_METADATA)
+    .get_parameter_metadata = zmk_behavior_get_empty_param_metadata,
+#endif // IS_ENABLED(CONFIG_ZMK_BEHAVIOR_METADATA)
 };
 
 #define BSO_INST(n)                                                                                \
