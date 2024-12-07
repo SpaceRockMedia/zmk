@@ -1,22 +1,48 @@
 {
-  "files.associations": {
-    "*.overlay": "dts",
-    "*.keymap": "dts"
-  },
-  "python.formatting.provider": "black",
   "[c]": {
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false
+  },
+  "[css][json][jsonc][html][markdown][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
   "[javascript][javascriptreact][typescript][typescriptreact]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": false
+  },
+  "[markdown]": {
+    "editor.trimAutoWhitespace": false,
+    "files.trimTrailingWhitespace": false
   },
   "[python]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true
   },
-  "[css][json][jsonc][html][markdown][yaml]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "C_Cpp.dimInactiveRegions": false,
+  "cmake.configureOnOpen": false,
+  "editor.insertSpaces": true,
+  "files.associations": {
+    "*.c": "c",
+    "*.cpp": "cpp",
+    "*.h": "c",
+    "*.hpp": "cpp",
+    "*.inc": "c",
+    "*.keymap": "dts",
+    "*.overlay": "dts",
+    "ranges": "c",
+    "type_traits": "c",
+    "utility": "c",
+    "xstddef": "c"
+  },
+  "files.exclude": {
+    "**/*.bin": true,
+    "**/*.hex": true,
+    "**/*.uf2": true,
+    "**/.build": true
+  },
+  "python.formatting.provider": "black"
 }
